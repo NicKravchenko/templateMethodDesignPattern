@@ -1,0 +1,7 @@
+[
+    { "id": 1, "location": "25.5,45.3", "date": "2023-05-25", "meassure": 24.1 },
+    { "id": 2, "location": "25.5,45.3", "date": "2023-05-25", "meassure": 20.5 },
+    { "id": 3, "location": "25.5,45.3", "date": "2023-05-25", "meassure": 28.5 },
+    { "id": 4, "location": "25.5,45.3", "date": "2023-05-25", "meassure": 22.5 },
+    { "id": 5, "location": "25.5,45.3", "date": "2023-05-25", "meassure": 24.3 }
+]

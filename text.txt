@@ -1,0 +1,2 @@
+#Id|Location|Date|Meassure
+1|25.5,45.3|2023-05-25|24.5
