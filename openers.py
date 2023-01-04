@@ -6,6 +6,7 @@ import pandas
 import xmltodict
 from xml.dom import minidom
 
+
 class ReadFlatFile(TemperatureRecordSummary):
     """
     Concrete classes have to implement all abstract operations of the base
@@ -13,9 +14,26 @@ class ReadFlatFile(TemperatureRecordSummary):
     """
 
     def readFile(self):
-        rawFile = open('sample-files/text.flat')
-        content = pandas.read_csv(rawFile)
-        print(content)
+        rawFlat = pandas.read_csv(
+            "sample-files/text.flat", delimiter=" ", header=None).to_dict()[0]
+        dictionary = []
+        for i in rawFlat:
+            res = {}
+            if (i == 0):
+                names = rawFlat[i].split("|")
+                names = [element.lower() for element in names]
+            else:
+                values = rawFlat[i].split("|")
+
+                for key in names:
+                    for value in values:
+                        res[key] = value
+                        values.remove(value)
+                        break
+
+                dictionary.append(res)
+
+        return dictionary
 
 
 class ReadJsonFile(TemperatureRecordSummary):

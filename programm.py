@@ -13,5 +13,5 @@ def client_code(abstract_class: TemperatureRecordSummary):
 
 
 client_code(ReadXmlFile())
-
-# client_code(ReadFlatFile())
+client_code(ReadJsonFile())
+client_code(ReadFlatFile())
